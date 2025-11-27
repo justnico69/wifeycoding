@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do You Love Me? 🥰</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="love-test-page">
+
+    <div class="test-container cute-card">
+        <img id="main-gif" src="assets/dudu_ask2.gif" alt="Dudu asking the question" class="main-gif">
+
+        <h1 id="question-text" class="cute-title">Do you love me?</h1>
+
+        <div class="button-group">
+            <button id="yes-btn" 
+                onmouseover="startYesLoop()" 
+                onmouseout="stopLoop()" 
+                onclick="handleYesClick()">
+                YES 💗
+            </button>
+
+            <button id="no-btn" 
+                onmouseover="startNoLoop()" 
+                onmouseout="stopLoop()"
+                onclick="handleNoClick()">
+                NO 😢
+            </button>
+        </div>
+    </div>
+
+    <script src="love_test.js"></script>
+</body>
+</html>

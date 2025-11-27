@@ -1,0 +1,127 @@
+/* Cute pastel theme */
+:root {
+    --color-bg: #ffeef4;
+    --color-card-bg: #ffffffcc;
+    --color-love: #ff8fab;
+    --color-love-hover: #ff6f95;
+    --color-fighting: #f08080;
+    --color-fighting-hover: #d96868;
+    --color-text: #555;
+    --color-accent: #ff5f8f;
+}
+
+/* Center page */
+.love-test-page, .success-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ffd6e8, #ffe6f5);
+    font-family: "Poppins", sans-serif;
+}
+
+/* Smooth fade */
+.main-gif {
+    animation: pop 0.4s ease;
+}
+
+/* Card container */
+.cute-card {
+    background: var(--color-card-bg);
+    padding: 40px 50px;
+    border-radius: 25px;
+    box-shadow: 0 12px 35px rgba(255, 150, 185, 0.35);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.cute-card:hover {
+    transform: scale(1.03);
+}
+
+.cute-title {
+    font-size: 2rem;
+    color: var(--color-accent);
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+/* GIF */
+#main-gif {
+    width: 250px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+/* Buttons */
+.button-group {
+    display: flex;
+    gap: 25px;
+    margin-top: 15px;
+    position: relative; /* ensure proper stacking context */
+    z-index: 5;          /* keep buttons above card decorations */
+}
+
+.button-group button {
+    padding: 15px 40px;
+    font-size: 1.1em;
+    font-weight: 600;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition: 0.25s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    position: relative;  /* avoid accidental overlap from transforms */
+    z-index: 6;
+}
+
+#yes-btn {
+    background-color: var(--color-love);
+    color: white;
+}
+#yes-btn:hover {
+    background-color: var(--color-love-hover);
+    transform: scale(1.05);
+}
+
+#no-btn {
+    background-color: var(--color-fighting);
+    color: white;
+}
+#no-btn:hover {
+    background-color: var(--color-fighting-hover);
+    transform: scale(1.05);
+}
+
+/* Success page styling */
+.success-message h1 {
+    color: var(--color-accent);
+    font-size: 2.8em;
+}
+
+.success-message h2 {
+    color: var(--color-text);
+    margin-bottom: 35px;
+}
+
+.gif-grid {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.gif-grid img {
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* Pop animation */
+@keyframes pop {
+    0% { transform: scale(0.9); opacity: 0.3; }
+    100% { transform: scale(1); opacity: 1; }
+}
